@@ -3,5 +3,9 @@ name = "mcp-poc"
 version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = [
+    "fastmcp>=4.2.0",
+    "langchain>=1.5.0",
+    "langchain-ollama>=1.1.0",
+    "langgraph>=1.2.22",
     "mcp>=2,<3",
 ]
