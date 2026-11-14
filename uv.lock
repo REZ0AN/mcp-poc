@@ -708,6 +708,11 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/33/9d/a59a56e2a7d37937739e54e20649ac351454954483e33a4fe98beeef7cdf/langchain-1.5.0-py3-none-any.whl", hash = "sha256:24e94c496a3e532be1f9541edb475d5d0975aeb1211c3f8fecc042da3ec44cfa", size = 176648, upload-time = "2026-11-11T15:47:07.964Z" },
 ]
 
+[package.optional-dependencies]
+mcp = [
+    { name = "fastmcp" },
+]
+
 [[package]]
 name = "langchain-core"
 version = "1.8.0"
@@ -882,7 +887,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "fastmcp" },
-    { name = "langchain" },
+    { name = "langchain", extra = ["mcp"] },
     { name = "langchain-ollama" },
     { name = "langgraph" },
     { name = "mcp" },
@@ -891,7 +896,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "fastmcp", specifier = ">=4.2.0" },
-    { name = "langchain", specifier = ">=1.5.0" },
+    { name = "langchain", extras = ["mcp"], specifier = ">=1.4.0" },
     { name = "langchain-ollama", specifier = ">=1.1.0" },
     { name = "langgraph", specifier = ">=1.2.22" },
     { name = "mcp", specifier = ">=2,<3" },
